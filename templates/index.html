@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📊 Stock Dashboard</h1>
+
+    <div class="search-box">
+        <input type="text" id="symbol" placeholder="Enter stock symbol (AAPL)">
+        <button onclick="loadStock()">Search</button>
+    </div>
+
+    <div class="card">
+    <h2 id="company">--</h2>
+    <p>Price: $<span id="price">--</span></p>
+    <p>Open: $<span id="open">--</span></p>
+    <p>High: $<span id="high">--</span></p>
+    <p>Low: $<span id="low">--</span></p>
+    <p>Prev Close: $<span id="prev">--</span></p>
+</div>
+
+    <canvas id="stockChart"></canvas>
+
+</div>
+
+<!-- 🔻 FOOTER -->
+<footer class="footer">
+    <p>© 2026 Stock Dashboard | Built with Flask + Chart.js</p>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
